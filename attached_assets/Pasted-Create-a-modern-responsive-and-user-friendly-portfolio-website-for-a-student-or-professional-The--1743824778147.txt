@@ -1,0 +1,158 @@
+Create a modern, responsive, and user-friendly portfolio website for a student or professional. The website should include sections like:
+
+Use a shiny, rainbow-style color scheme with bright and eye-catching colors like blue, pink, purple, green, yellow, and orange. Add gradient backgrounds, glowing buttons, soft shadows, and hover effects for a smooth and colorful experience. The layout should still be clean and easy to read.
+
+✅ No database is needed.
+✅ The website should be fully static and deployed live on GitHub Pages.
+✅ Please include the GitHub Pages setup (like proper index.html, README.md, and gh-pages branch instructions if needed).
+
+The Contact Form should work using Web3Forms API. Use the following Public Access Key in the form:
+
+Copy
+Edit
+5fa75b1d-6680-45d0-962b-32e1f7714798
+
+Use a shiny, rainbow-style color scheme with bright and eye-catching colors like blue, pink, purple, green, yellow, and orange. Add gradient backgrounds, soft shadows, and hover effects to give a glowing and colorful look.
+
+The design should still be clean and readable. Use white or black text where needed for contrast. Make sure all pages look good on both desktop and mobile. Add icons, buttons, and links. Include a contact form and social media links at the end.
+Personal Details
+Full Name: Vaibhav Vishwkarma
+
+
+
+Website: https://vaibhavvishwkarma.github.io/Vaibhav-Web/
+
+LinkedIn: https://www.linkedin.com/in/vaibhav-vishwkarma-b561a12a5/
+
+Address: Uttar Pradesh, 246762, Nagina, India (Home)
+
+About Me
+Passionate about programming, artificial intelligence, and IoT-driven technologies. Strong foundation in problem-solving and logical thinking. Eager to deepen knowledge in software development, intelligent systems, and digital technologies, and apply skills in a practical, technology-driven environment.
+
+Education and Training
+German Language A1 - A2
+
+Institution: Language Pantheon (Offline)
+
+Duration: 01/09/2024 – CURRENT
+
+Website: https://languagepantheon.com/
+
+Bachelor of Computer Applications
+
+Institution: Teerthanker Mahaveer University, Moradabad, India
+
+Duration: 22/08/2023 – 30/06/2024
+
+Field of Study: Computer Science
+
+Final Grade: 8.74/10
+
+Website: https://www.tmu.ac.in/
+
+Senior School Certificate
+
+Board: Central Board of Secondary Education
+
+Duration: 01/04/2022 – 01/03/2023
+
+Field of Study: Physics, Chemistry, Mathematics, Information Technology, Physical Education
+
+Final Grade: 62.8%
+
+Secondary School Certificate
+
+Board: Central Board of Secondary Education
+
+Duration: 01/03/2021 – 14/07/2022
+
+Field of Study: Mathematics Standard, Science, Social Science, English, Information Technology
+
+Final Grade: 60.2%
+
+Language Skills
+Mother Tongue: Hindi
+
+Other Languages:
+
+English:
+
+Understanding: B2 (Listening), B1 (Reading)
+
+Speaking: B2 (Spoken Production), B2 (Spoken Interaction)
+
+Writing: B2
+
+German:
+
+Understanding: A2 (Listening), A2 (Reading)
+
+Speaking: A2 (Spoken Production), A2 (Spoken Interaction)
+
+Writing: A2
+
+Levels: A1 and A2: Basic user; B1 and B2: Independent user; C1 and C2: Proficient user
+
+Skills
+Programming Languages: C, Python (Pandas, NumPy, Matplotlib & Seaborn)
+
+Web Development: HTML, CSS, JavaScript, Tailwind CSS, React.js, PHP, MySQL
+
+Design Tools: Figma, Adobe XD
+
+Data Analysis: Tableau, MS Excel
+
+Version Control: Git
+
+Certifications
+Front-End Developer Professional Certificate (Meta)
+
+Link: https://www.coursera.org/account/accomplishments/professional-cert/PUOLRPVAML3A
+
+Python for Data Science, AI & Development (IBM)
+
+Link: https://www.coursera.org/account/accomplishments/verify/UPSNDHSSAN5A
+
+Machine Learning with Python (IBM)
+
+Link: https://www.coursera.org/account/accomplishments/verify/7W3RP5EOZ7VH
+
+AWS Cloud Technical Essentials (Amazon Web Services)
+
+Link: https://www.coursera.org/account/accomplishments/verify/T6AORU0M0LNZ
+Introduction to data analytics(IBM)
+Link: https://www.coursera.org/account/accomplishments/verify/Y9G5QQG6DR5Z
+c programming(infosys springboard)
+link: https://drive.google.com/file/d/1b5Y267iczKKzRN8uZ5z2xMfjJf_U-86F/view?usp=sharing
+
+
+Projects
+Customer Sales Insight Dashboard
+
+Description: Developed a Tableau-based sales analytics dashboard analyzing 2.9M INR transaction data. Identified top spenders (25-34 age group), regional performance (Maharashtra as highest-grossing), and payment preferences (61% UPI adoption).
+
+Link: https://github.com/vaibhavVishwkarma/Customer-Sales-Insight-Analysis
+
+Nike Store E-Commerce Website
+
+Description: Built an immersive sneaker storefront with manual slider, product customization, and responsive payment form. Features adaptive design and brand-specific aesthetics.
+
+Link: https://github.com/vaibhavVishwkarma/Shoes-Store-
+
+Real-Time Weather Application
+
+Description: Live weather monitoring system using OpenWeatherMap API, displaying temperature, humidity, wind patterns, and dynamic background adjustments.
+
+Link: https://github.com/vaibhavVishwkarma/Weather-Web-App
+
+Quick QR Code Generator
+
+Description: Lightweight web tool for generating QR codes from text or URLs with a minimalist interface.
+
+Link: https://github.com/vaibhavVishwkarma/QR-CODE-GENERATOR-
+mobile marekt analysis
+etc
+
+
+
+
