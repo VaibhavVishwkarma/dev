@@ -65,11 +65,13 @@ const HeroSection = () => {
           <div className="w-full lg:w-1/2 order-1 lg:order-2 mb-10 lg:mb-0">
             <div className="relative">
               <div className="absolute -inset-2 bg-gradient-to-r from-purple via-blue to-pink rounded-full blur-xl opacity-20 animate-pulse"></div>
-              <div className="relative bg-white rounded-full p-4 shadow-xl max-w-md mx-auto">
-                <div className="aspect-w-1 aspect-h-1 rounded-full overflow-hidden bg-gradient-to-r from-purple to-blue">
-                  <div className="flex items-center justify-center h-full text-white text-9xl">
-                    <span className="font-bold font-poppins">V</span>
-                  </div>
+              <div className="relative bg-white rounded-full p-2 shadow-xl max-w-md mx-auto">
+                <div className="aspect-w-1 aspect-h-1 rounded-full overflow-hidden">
+                  <img 
+                    src="./images/user-img.png" 
+                    alt="Vaibhav Vishwkarma" 
+                    className="object-cover w-full h-full"
+                  />
                 </div>
               </div>
             </div>

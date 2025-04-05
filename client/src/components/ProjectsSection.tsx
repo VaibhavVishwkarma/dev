@@ -6,52 +6,44 @@ const ProjectsSection = () => {
   
   const projects = [
     {
-      title: "AI-Powered Portfolio Generator",
-      description: "A Next.js application that leverages AI to generate personalized portfolio websites based on user inputs.",
-      image: "/project1.jpg",
-      tags: ["TypeScript", "Next.js", "GPT-4 API", "Tailwind CSS"],
-      github: "https://github.com/vaibhav-vishwakrma/ai-portfolio",
-      demo: "https://ai-portfolio-demo.vercel.app/"
+      title: "Weather Forecast App",
+      description: "A responsive web application that shows current weather and 5-day forecast using the OpenWeatherMap API.",
+      image: "./images/project1.jpg",
+      tags: ["JavaScript", "React", "CSS", "API Integration"],
+      github: "https://github.com/vaibhav-vishwkarma/weather-app",
+      demo: "https://weather-forecast-vv.netlify.app/"
     },
     {
-      title: "Machine Learning Stock Predictor",
-      description: "A Python application using machine learning algorithms to predict stock market trends and provide investment insights.",
-      image: "/project2.jpg",
-      tags: ["Python", "TensorFlow", "Pandas", "Matplotlib"],
-      github: "https://github.com/vaibhav-vishwakrma/ml-stocks",
-      demo: "https://ml-stocks-demo.herokuapp.com/"
+      title: "Task Manager Dashboard",
+      description: "A task management application with drag-and-drop functionality, priority setting, and deadline reminders.",
+      image: "./images/project2.jpg",
+      tags: ["React", "CSS", "LocalStorage", "React DnD"],
+      github: "https://github.com/vaibhav-vishwkarma/task-manager",
+      demo: "https://task-manager-vv.netlify.app/"
     },
     {
-      title: "Smart Home IoT Dashboard",
-      description: "A React-based dashboard for monitoring and controlling smart home devices with real-time data visualization.",
-      image: "/project3.jpg",
-      tags: ["React", "Node.js", "Socket.io", "Chart.js"],
-      github: "https://github.com/vaibhav-vishwakrma/smart-home-dashboard",
-      demo: "https://smart-home-dashboard.netlify.app/"
+      title: "Personal Blog Platform",
+      description: "A simple blog platform where users can create, edit, and publish articles with a clean, responsive interface.",
+      image: "./images/project3.jpg",
+      tags: ["JavaScript", "React", "CSS", "Markdown"],
+      github: "https://github.com/vaibhav-vishwkarma/blog-platform",
+      demo: "https://blog-platform-vv.netlify.app/"
     },
     {
-      title: "E-Learning Platform",
-      description: "A full-stack application for online education with features like video lectures, quizzes, and progress tracking.",
-      image: "/project4.jpg",
-      tags: ["MERN Stack", "Redux", "AWS S3", "Firebase"],
-      github: "https://github.com/vaibhav-vishwakrma/e-learning-platform",
-      demo: "https://learn-online-platform.vercel.app/"
+      title: "Recipe Finder",
+      description: "An application that allows users to search for recipes based on ingredients they have available.",
+      image: "./images/project4.jpg",
+      tags: ["JavaScript", "React", "Food API", "CSS"],
+      github: "https://github.com/vaibhav-vishwkarma/recipe-finder",
+      demo: "https://recipe-finder-vv.netlify.app/"
     },
     {
-      title: "Blockchain Voting System",
-      description: "A decentralized application for secure and transparent voting using Ethereum blockchain technology.",
-      image: "/project5.jpg",
-      tags: ["Solidity", "Ethereum", "Web3.js", "React"],
-      github: "https://github.com/vaibhav-vishwakrma/blockchain-voting",
-      demo: "https://blockchain-voting.netlify.app/"
-    },
-    {
-      title: "AR Shopping Experience",
-      description: "A mobile application that uses augmented reality to enhance the online shopping experience.",
-      image: "/project6.jpg",
-      tags: ["React Native", "ARKit", "ARCore", "Firebase"],
-      github: "https://github.com/vaibhav-vishwakrma/ar-shopping",
-      demo: "https://ar-shopping-demo.vercel.app/"
+      title: "Movie Recommendation System",
+      description: "A web app that recommends movies based on user preferences and previous viewing history.",
+      image: "./images/project5.jpg",
+      tags: ["Python", "React", "TMDB API", "CSS Grid"],
+      github: "https://github.com/vaibhav-vishwkarma/movie-recommender",
+      demo: "https://movie-recommender-vv.netlify.app/"
     }
   ];
 

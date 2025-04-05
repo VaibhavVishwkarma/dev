@@ -50,76 +50,76 @@ const ContactSection = () => {
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">Have a project in mind or want to collaborate? Feel free to reach out!</p>
         </div>
         
-        <div className="flex flex-col lg:flex-row gap-12">
-          <div className="w-full lg:w-1/2">
-            <div className="glass-card p-8 rounded-xl shadow-lg">
-              <h3 className="text-xl font-semibold mb-6 font-poppins">Send a Message</h3>
+        <div className="max-w-2xl mx-auto">
+          <div className="glass-card p-8 rounded-xl shadow-lg">
+            <h3 className="text-xl font-semibold mb-6 font-poppins text-center">Send a Message</h3>
+            
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple/50 focus:border-transparent"
+                  placeholder="Your name"
+                />
+              </div>
               
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple/50 focus:border-transparent"
-                    placeholder="John Doe"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple/50 focus:border-transparent"
-                    placeholder="john@example.com"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple/50 focus:border-transparent"
-                    placeholder="Project Inquiry"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple/50 focus:border-transparent"
-                    placeholder="Your message here..."
-                  ></textarea>
-                </div>
-                
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  Your Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple/50 focus:border-transparent"
+                  placeholder="Your email address"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple/50 focus:border-transparent"
+                  placeholder="Subject of your message"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={6}
+                  className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple/50 focus:border-transparent"
+                  placeholder="Your message here..."
+                ></textarea>
+              </div>
+              
+              <div className="pt-4">
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -137,90 +137,35 @@ const ContactSection = () => {
                     "Send Message"
                   )}
                 </button>
-              </form>
-            </div>
+              </div>
+            </form>
           </div>
           
-          <div className="w-full lg:w-1/2">
-            <div className="glass-card p-8 rounded-xl shadow-lg h-full">
-              <h3 className="text-xl font-semibold mb-6 font-poppins">Get in Touch</h3>
-              
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple to-blue text-white flex items-center justify-center mr-4">
-                    <i className="fas fa-envelope"></i>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-gray-800 mb-1">Email</h4>
-                    <a href="mailto:vaibhav.vishwkarma@example.com" className="text-purple hover:underline">
-                      vaibhav.vishwkarma@example.com
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue to-purple text-white flex items-center justify-center mr-4">
-                    <i className="fas fa-map-marker-alt"></i>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-gray-800 mb-1">Location</h4>
-                    <p className="text-gray-600">
-                      Delhi, India
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-pink to-purple text-white flex items-center justify-center mr-4">
-                    <i className="fas fa-globe"></i>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium text-gray-800 mb-1">Social Profiles</h4>
-                    <div className="flex gap-4 mt-2">
-                      <a 
-                        href="https://github.com/vaibhav-vishwkarma" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-gray-700 hover:text-purple transition-colors text-xl"
-                      >
-                        <i className="fab fa-github"></i>
-                      </a>
-                      <a 
-                        href="https://www.linkedin.com/in/vaibhav-vishwkarma" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-gray-700 hover:text-blue transition-colors text-xl"
-                      >
-                        <i className="fab fa-linkedin-in"></i>
-                      </a>
-                      <a 
-                        href="https://twitter.com/vaibhav_vishw" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-gray-700 hover:text-[#1DA1F2] transition-colors text-xl"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </a>
-                      <a 
-                        href="https://www.instagram.com/vaibhav_vishwkarma" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-gray-700 hover:text-[#E1306C] transition-colors text-xl"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="pt-6 mt-6 border-t border-gray-200">
-                  <h4 className="text-lg font-medium text-gray-800 mb-4">Availability</h4>
-                  <p className="text-gray-600">
-                    I'm currently available for part-time remote work and freelance projects. Feel free to reach out for collaborations or inquiries.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="flex justify-center mt-10 gap-6">
+            <a 
+              href="https://github.com/vaibhav-vishwkarma" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-gradient-to-r from-purple to-blue flex items-center justify-center text-white hover:shadow-lg transition-all duration-300"
+            >
+              <i className="fab fa-github"></i>
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/vaibhav-vishwkarma" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-gradient-to-r from-blue to-purple flex items-center justify-center text-white hover:shadow-lg transition-all duration-300"
+            >
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a 
+              href="https://twitter.com/vaibhav_vishw" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-gradient-to-r from-purple to-pink flex items-center justify-center text-white hover:shadow-lg transition-all duration-300"
+            >
+              <i className="fab fa-twitter"></i>
+            </a>
           </div>
         </div>
       </div>

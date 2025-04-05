@@ -4,21 +4,17 @@ const SkillsSection = () => {
   // Technical Skills data
   const technicalSkills = [
     { name: "JavaScript", level: 85 },
-    { name: "React.js", level: 80 },
-    { name: "Python", level: 90 },
-    { name: "Machine Learning", level: 75 },
-    { name: "Node.js", level: 70 },
-    { name: "TypeScript", level: 65 },
-    { name: "Next.js", level: 60 },
-    { name: "TensorFlow", level: 70 }
+    { name: "React.js", level: 90 },
+    { name: "Python", level: 92 },
+    { name: "HTML/CSS", level: 88 },
+    { name: "SQL", level: 75 },
+    { name: "Git/GitHub", level: 82 }
   ];
 
   // Languages data (without proficiency level notations)
   const languages = [
     { name: "English", level: 95 },
-    { name: "Hindi", level: 100 },
-    { name: "French", level: 45 },
-    { name: "German", level: 30 }
+    { name: "Hindi", level: 100 }
   ];
 
   // Soft Skills data
