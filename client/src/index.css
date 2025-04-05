@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    
+    --primary: 263 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 323 100% 53%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    
+    --accent: 195 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 263 70% 50%;
+    
+    --radius: 0.5rem;
+
+    --purple: 263 70% 50%;
+    --pink: 323 100% 53%;
+    --blue: 195 100% 50%;
+    --green: 122 61% 50%;
+    --orange: 33 100% 50%;
+    --yellow: 60 100% 50%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-r animate-gradient-x;
+  }
+  
+  .glow-btn {
+    @apply transition-all hover:-translate-y-1 duration-300;
+    &:hover {
+      box-shadow: 0 0 15px rgba(138, 43, 226, 0.8), 0 0 30px rgba(255, 20, 147, 0.5);
+    }
+  }
+
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-md border border-white/20;
+  }
+
+  .timeline-item::before {
+    content: '';
+    @apply absolute w-4 h-4 rounded-full bg-gradient-to-r from-pink to-purple -left-2 top-6;
+  }
+
+  .progress-bar {
+    @apply bg-gradient-to-r from-purple via-pink to-blue bg-size-200 animate-gradient-x;
+  }
+}
+
+@layer utilities {
+  .bg-size-200 {
+    background-size: 200% auto;
+  }
+}
