@@ -6,44 +6,28 @@ const ProjectsSection = () => {
   
   const projects = [
     {
-      title: "Weather Forecast App",
-      description: "A responsive web application that shows current weather and 5-day forecast using the OpenWeatherMap API.",
+      title: "Customer Sales Insight Dashboard",
+      description: "Developed a Tableau-based sales analytics dashboard analyzing 2.9M INR transaction data. Identified top spenders (25-34 age group), regional performance (Maharashtra as highest-grossing), and payment preferences (61% UPI adoption).",
       image: "./images/project1.jpg",
-      tags: ["JavaScript", "React", "CSS", "API Integration"],
-      github: "https://github.com/vaibhav-vishwkarma/weather-app",
-      demo: "https://weather-forecast-vv.netlify.app/"
+      tags: ["Tableau", "Data Analysis", "Dashboard", "Sales Analytics"],
+      github: "https://github.com/vaibhavVishwkarma/Customer-Sales-Insight-Analysis",
+      demo: "https://github.com/vaibhavVishwkarma/Customer-Sales-Insight-Analysis"
     },
     {
-      title: "Task Manager Dashboard",
-      description: "A task management application with drag-and-drop functionality, priority setting, and deadline reminders.",
+      title: "Nike Store E-Commerce Website",
+      description: "Built an immersive sneaker storefront with manual slider, product customization, and responsive payment form. Features adaptive design and brand-specific aesthetics.",
       image: "./images/project2.jpg",
-      tags: ["React", "CSS", "LocalStorage", "React DnD"],
-      github: "https://github.com/vaibhav-vishwkarma/task-manager",
-      demo: "https://task-manager-vv.netlify.app/"
+      tags: ["React", "CSS", "E-Commerce", "UI/UX"],
+      github: "https://github.com/vaibhavVishwkarma/Shoes-Store-",
+      demo: "https://github.com/vaibhavVishwkarma/Shoes-Store-"
     },
     {
-      title: "Personal Blog Platform",
-      description: "A simple blog platform where users can create, edit, and publish articles with a clean, responsive interface.",
+      title: "Real-Time Weather Application",
+      description: "Live weather monitoring system using OpenWeatherMap API, displaying temperature, humidity, wind patterns, and dynamic background adjustments based on weather conditions.",
       image: "./images/project3.jpg",
-      tags: ["JavaScript", "React", "CSS", "Markdown"],
-      github: "https://github.com/vaibhav-vishwkarma/blog-platform",
-      demo: "https://blog-platform-vv.netlify.app/"
-    },
-    {
-      title: "Recipe Finder",
-      description: "An application that allows users to search for recipes based on ingredients they have available.",
-      image: "./images/project4.jpg",
-      tags: ["JavaScript", "React", "Food API", "CSS"],
-      github: "https://github.com/vaibhav-vishwkarma/recipe-finder",
-      demo: "https://recipe-finder-vv.netlify.app/"
-    },
-    {
-      title: "Movie Recommendation System",
-      description: "A web app that recommends movies based on user preferences and previous viewing history.",
-      image: "./images/project5.jpg",
-      tags: ["Python", "React", "TMDB API", "CSS Grid"],
-      github: "https://github.com/vaibhav-vishwkarma/movie-recommender",
-      demo: "https://movie-recommender-vv.netlify.app/"
+      tags: ["JavaScript", "API Integration", "Weather Data", "React"],
+      github: "https://github.com/vaibhavVishwkarma/Real-Time-Weather-App",
+      demo: "https://github.com/vaibhavVishwkarma/Real-Time-Weather-App"
     }
   ];
 
@@ -84,40 +68,32 @@ const ProjectsSection = () => {
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">Showcase of my latest work across various technologies and domains.</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="projects-grid grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {visibleProjects.map((project, index) => (
-            <div key={index} className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 bg-white">
-              <div className="h-48 bg-gradient-to-r from-purple/20 to-blue/20 flex items-center justify-center">
-                <div className="text-4xl bg-white p-3 rounded-full">
+            <div key={index} className="project-card rounded-xl overflow-hidden shadow-lg bg-white">
+              <div className="h-40 bg-gradient-to-r from-purple/20 to-blue/20 flex items-center justify-center">
+                <div className="text-3xl bg-white p-3 rounded-full">
                   <i className="fas fa-laptop-code text-purple"></i>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-poppins font-semibold mb-3">{project.title}</h3>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <div className="mb-5 flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIndex) => (
+              <div className="p-5 flex flex-col flex-grow">
+                <h3 className="text-lg font-poppins font-semibold mb-2">{project.title}</h3>
+                <p className="text-gray-600 mb-3 text-sm flex-grow">{project.description}</p>
+                <div className="mb-4 flex flex-wrap gap-1">
+                  {project.tags.slice(0, 2).map((tag, tagIndex) => (
                     <span key={tagIndex} className="px-2 py-1 text-xs font-medium rounded-full bg-purple/10 text-purple">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-4">
+                <div className="flex gap-3 mt-auto">
                   <a 
                     href={project.github} 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="flex items-center text-sm text-purple hover:underline"
+                    className="flex items-center text-xs text-purple hover:underline"
                   >
-                    <i className="fab fa-github mr-2"></i> Code
-                  </a>
-                  <a 
-                    href={project.demo} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="flex items-center text-sm text-blue hover:underline"
-                  >
-                    <i className="fas fa-external-link-alt mr-2"></i> Live Demo
+                    <i className="fab fa-github mr-1"></i> GitHub
                   </a>
                 </div>
               </div>
