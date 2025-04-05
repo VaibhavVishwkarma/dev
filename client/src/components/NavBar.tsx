@@ -86,7 +86,7 @@ const NavBar = () => {
       
       {/* Mobile Menu - Slide from right */}
       <div 
-        className={`fixed top-0 right-0 h-full w-4/5 max-w-sm bg-gradient-to-br from-pink-100 to-pink-50 shadow-xl transform transition-transform duration-300 ease-in-out z-40 ${
+        className={`fixed top-0 right-0 h-full w-4/5 max-w-sm bg-pink-300 shadow-xl transform transition-transform duration-300 ease-in-out z-40 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
