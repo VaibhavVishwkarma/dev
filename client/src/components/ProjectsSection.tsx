@@ -16,28 +16,28 @@ const ProjectsSection = () => {
     {
       title: "Customer Sales Insight Dashboard",
       description: "Developed a Tableau-based sales analytics dashboard analyzing 2.9M INR transaction data. Identified top spenders (25-34 age group), regional performance (Maharashtra as highest-grossing), and payment preferences (61% UPI adoption).",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070",
+      image: "images/project1.jpg",
       tags: ["Tableau", "Data Analysis", "Dashboard", "Sales Analytics"],
       github: "https://github.com/vaibhavVishwkarma/Customer-Sales-Insight-Analysis"
     },
     {
       title: "Nike Store E-Commerce Website",
       description: "Built an immersive sneaker storefront with manual slider, product customization, and responsive payment form. Features adaptive design and brand-specific aesthetics.",
-      image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=2070",
+      image: "images/project2.jpg",
       tags: ["React", "CSS", "E-Commerce", "UI/UX"],
       github: "https://github.com/vaibhavVishwkarma/Shoes-Store-"
     },
     {
       title: "Real-Time Weather Application",
       description: "Live weather monitoring system using OpenWeatherMap API, displaying temperature, humidity, wind patterns, and dynamic background adjustments based on weather conditions.",
-      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=2070",
+      image: "images/project3.jpg",
       tags: ["JavaScript", "API Integration", "Weather Data", "React"],
       github: "https://github.com/vaibhavVishwkarma/Real-Time-Weather-App"
     },
     {
       title: "Portfolio Website",
       description: "A modern, responsive portfolio website with sections for skills, projects, education, and more. Features a rainbow theme with gradient animations and responsive design for all devices.",
-      image: "https://images.unsplash.com/photo-1545665277-5937489579f2?auto=format&fit=crop&q=80&w=2070",
+      image: "images/project4.jpg",
       tags: ["HTML", "CSS", "JavaScript", "React"],
       github: "https://github.com/vaibhavVishwkarma/portfolio"
     }

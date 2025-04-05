@@ -36,7 +36,7 @@ const HeroSection = () => {
             
             <div className="mt-4 flex justify-center lg:justify-start">
               <a 
-                href="/CV.pdf" 
+                href="CV.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-auto px-6 py-3 rounded-full bg-gradient-to-r from-pink to-purple text-white font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 glow-btn flex items-center"
@@ -79,7 +79,7 @@ const HeroSection = () => {
               <div className="relative bg-white rounded-full p-2 shadow-xl max-w-md mx-auto">
                 <div className="aspect-w-1 aspect-h-1 rounded-full overflow-hidden">
                   <img 
-                    src="./images/user-img.png" 
+                    src="images/user-img.png" 
                     alt="Vaibhav Vishwkarma" 
                     className="object-cover w-full h-full"
                   />
