@@ -25,6 +25,19 @@ const NavBar = () => {
   const handleLinkClick = () => {
     setIsOpen(false);
   };
+
+  // Prevent scrolling when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isOpen]);
   
   return (
     <header 
@@ -56,12 +69,11 @@ const NavBar = () => {
             <a href="#contact" className="text-gray-700 hover:text-purple transition-colors">Contact</a>
           </div>
           
-          {/* Resume Button removed as requested */}
-          
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-800 focus:outline-none"
+            className="md:hidden z-50 text-gray-800 focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
           >
             {isOpen ? (
               <i className="fas fa-times text-xl"></i>
@@ -72,24 +84,45 @@ const NavBar = () => {
         </nav>
       </div>
       
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Slide from right */}
       <div 
-        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-300 ${
-          isOpen ? 'max-h-screen py-5 opacity-100' : 'max-h-0 py-0 opacity-0 overflow-hidden'
+        className={`fixed top-0 right-0 h-full w-4/5 max-w-sm bg-gradient-to-br from-purple-50 to-blue-50 shadow-xl transform transition-transform duration-300 ease-in-out z-40 ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="container mx-auto px-4 flex flex-col space-y-4">
-          <a href="#home" className="text-gray-700 hover:text-purple transition-colors py-2" onClick={handleLinkClick}>Home</a>
-          <a href="#about" className="text-gray-700 hover:text-purple transition-colors py-2" onClick={handleLinkClick}>About</a>
-          <a href="#education" className="text-gray-700 hover:text-purple transition-colors py-2" onClick={handleLinkClick}>Education</a>
-          <a href="#skills" className="text-gray-700 hover:text-purple transition-colors py-2" onClick={handleLinkClick}>Skills</a>
-          <a href="#certifications" className="text-gray-700 hover:text-purple transition-colors py-2" onClick={handleLinkClick}>Certifications</a>
-          <a href="#projects" className="text-gray-700 hover:text-purple transition-colors py-2" onClick={handleLinkClick}>Projects</a>
-          <a href="#contact" className="text-gray-700 hover:text-purple transition-colors py-2" onClick={handleLinkClick}>Contact</a>
-          
-          {/* Mobile Resume Button removed as requested */}
+        {/* Close button at the top */}
+        <div className="flex justify-end p-4">
+          <button 
+            onClick={() => setIsOpen(false)}
+            className="p-2 text-gray-700 hover:text-purple transition-colors"
+            aria-label="Close menu"
+          >
+            <i className="fas fa-times text-xl"></i>
+          </button>
         </div>
+        
+        {/* Menu items */}
+        <div className="flex flex-col space-y-6 px-8 py-10">
+          <a href="#home" className="text-gray-700 hover:text-purple transition-colors py-2 text-lg font-medium" onClick={handleLinkClick}>Home</a>
+          <a href="#about" className="text-gray-700 hover:text-purple transition-colors py-2 text-lg font-medium" onClick={handleLinkClick}>About</a>
+          <a href="#education" className="text-gray-700 hover:text-purple transition-colors py-2 text-lg font-medium" onClick={handleLinkClick}>Education</a>
+          <a href="#skills" className="text-gray-700 hover:text-purple transition-colors py-2 text-lg font-medium" onClick={handleLinkClick}>Skills</a>
+          <a href="#certifications" className="text-gray-700 hover:text-purple transition-colors py-2 text-lg font-medium" onClick={handleLinkClick}>Certifications</a>
+          <a href="#projects" className="text-gray-700 hover:text-purple transition-colors py-2 text-lg font-medium" onClick={handleLinkClick}>Projects</a>
+          <a href="#contact" className="text-gray-700 hover:text-purple transition-colors py-2 text-lg font-medium" onClick={handleLinkClick}>Contact</a>
+        </div>
+        
+        {/* Gradient decoration at the bottom */}
+        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-r from-purple to-blue opacity-10"></div>
       </div>
+      
+      {/* Backdrop overlay */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black/50 z-30 transition-opacity duration-300 md:hidden"
+          onClick={() => setIsOpen(false)}
+        ></div>
+      )}
     </header>
   );
 };

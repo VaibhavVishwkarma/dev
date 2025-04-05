@@ -3,9 +3,8 @@
   <!-- Background Circle -->
   <circle cx="128" cy="128" r="128" fill="url(#paint0_linear)"/>
   
-  <!-- VV Text - Fixed orientation to match attached image -->
-  <path d="M114 83L134 173H119L103 98H104L88 173H72L92 83H114Z" fill="white"/>
-  <path d="M181 83L201 173H186L170 98H171L155 173H139L159 83H181Z" fill="white"/>
+  <!-- Single Letter "V" like in the image reference -->
+  <path d="M153 83L173 173H153L136 98H120L103 173H83L103 83H153Z" fill="white"/>
   
   <!-- Gradient Definition -->
   <defs>
