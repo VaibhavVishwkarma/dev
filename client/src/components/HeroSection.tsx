@@ -79,7 +79,7 @@ const HeroSection = () => {
               <div className="relative bg-white rounded-full p-2 shadow-xl max-w-md mx-auto">
                 <div className="aspect-w-1 aspect-h-1 rounded-full overflow-hidden">
                   <img 
-                    src="images/user-img.png" 
+                    src="/images/user-img.png" 
                     alt="Vaibhav Vishwkarma" 
                     className="object-cover w-full h-full"
                   />
