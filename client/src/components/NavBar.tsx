@@ -86,23 +86,12 @@ const NavBar = () => {
       
       {/* Mobile Menu - Slide from right */}
       <div 
-        className={`fixed top-0 right-0 h-full w-4/5 max-w-sm bg-gradient-to-br from-purple-50 to-blue-50 shadow-xl transform transition-transform duration-300 ease-in-out z-40 ${
+        className={`fixed top-0 right-0 h-full w-4/5 max-w-sm bg-gradient-to-br from-purple-100 to-blue-100 shadow-xl transform transition-transform duration-300 ease-in-out z-40 ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        {/* Close button at the top */}
-        <div className="flex justify-end p-4">
-          <button 
-            onClick={() => setIsOpen(false)}
-            className="p-2 text-gray-700 hover:text-purple transition-colors"
-            aria-label="Close menu"
-          >
-            <i className="fas fa-times text-xl"></i>
-          </button>
-        </div>
-        
-        {/* Menu items */}
-        <div className="flex flex-col space-y-6 px-8 py-10">
+        {/* Menu items - Removed extra close button */}
+        <div className="flex flex-col space-y-6 px-8 py-20 mt-10">
           <a href="#home" className="text-gray-700 hover:text-purple transition-colors py-2 text-lg font-medium" onClick={handleLinkClick}>Home</a>
           <a href="#about" className="text-gray-700 hover:text-purple transition-colors py-2 text-lg font-medium" onClick={handleLinkClick}>About</a>
           <a href="#education" className="text-gray-700 hover:text-purple transition-colors py-2 text-lg font-medium" onClick={handleLinkClick}>Education</a>
@@ -113,7 +102,7 @@ const NavBar = () => {
         </div>
         
         {/* Gradient decoration at the bottom */}
-        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-r from-purple to-blue opacity-10"></div>
+        <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-r from-purple to-blue opacity-20"></div>
       </div>
       
       {/* Backdrop overlay */}

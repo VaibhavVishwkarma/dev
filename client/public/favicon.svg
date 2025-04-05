@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background Circle -->
+  <!-- Background Circle with Gradient -->
   <circle cx="128" cy="128" r="128" fill="url(#paint0_linear)"/>
   
-  <!-- Single Letter "V" like in the image reference -->
-  <path d="M153 83L173 173H153L136 98H120L103 173H83L103 83H153Z" fill="white"/>
-  
+  <!-- Anonymous Coder Silhouette -->
+  <g>
+    <!-- Head and Hoodie -->
+    <path d="M128 70C106 70 90 92 90 110C90 128 100 136 100 146C100 156 90 161 80 171C70 181 70 196 70 196H186C186 196 186 181 176 171C166 161 156 156 156 146C156 136 166 128 166 110C166 92 150 70 128 70Z" fill="#333333"/>
+    
+    <!-- Face Shadow -->
+    <path d="M128 70C106 70 90 92 90 110C90 128 100 136 100 146C100 150 98 154 96 157C100 154 108 150 128 150C148 150 156 154 160 157C158 154 156 150 156 146C156 136 166 128 166 110C166 92 150 70 128 70Z" fill="#222222"/>
+    
+    <!-- Code Brackets -->
+    <path d="M110 120L95 135L110 150" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M146 120L161 135L146 150" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M135 110L121 160" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
   <!-- Gradient Definition -->
   <defs>
     <linearGradient id="paint0_linear" x1="0" y1="0" x2="256" y2="256" gradientUnits="userSpaceOnUse">
