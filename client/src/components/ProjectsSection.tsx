@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 interface ProjectItem {
   title: string;
   description: string;
-  icon: string;
+  image: string;
   tags: string[];
   github: string;
 }
@@ -16,23 +16,30 @@ const ProjectsSection = () => {
     {
       title: "Customer Sales Insight Dashboard",
       description: "Developed a Tableau-based sales analytics dashboard analyzing 2.9M INR transaction data. Identified top spenders (25-34 age group), regional performance (Maharashtra as highest-grossing), and payment preferences (61% UPI adoption).",
-      icon: "chart-pie",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070",
       tags: ["Tableau", "Data Analysis", "Dashboard", "Sales Analytics"],
       github: "https://github.com/vaibhavVishwkarma/Customer-Sales-Insight-Analysis"
     },
     {
       title: "Nike Store E-Commerce Website",
       description: "Built an immersive sneaker storefront with manual slider, product customization, and responsive payment form. Features adaptive design and brand-specific aesthetics.",
-      icon: "shopping-cart",
+      image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=2070",
       tags: ["React", "CSS", "E-Commerce", "UI/UX"],
       github: "https://github.com/vaibhavVishwkarma/Shoes-Store-"
     },
     {
       title: "Real-Time Weather Application",
       description: "Live weather monitoring system using OpenWeatherMap API, displaying temperature, humidity, wind patterns, and dynamic background adjustments based on weather conditions.",
-      icon: "cloud-sun",
+      image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=2070",
       tags: ["JavaScript", "API Integration", "Weather Data", "React"],
       github: "https://github.com/vaibhavVishwkarma/Real-Time-Weather-App"
+    },
+    {
+      title: "Portfolio Website",
+      description: "A modern, responsive portfolio website with sections for skills, projects, education, and more. Features a rainbow theme with gradient animations and responsive design for all devices.",
+      image: "https://images.unsplash.com/photo-1545665277-5937489579f2?auto=format&fit=crop&q=80&w=2070",
+      tags: ["HTML", "CSS", "JavaScript", "React"],
+      github: "https://github.com/vaibhavVishwkarma/portfolio"
     }
   ];
 
@@ -64,11 +71,6 @@ const ProjectsSection = () => {
     setShowAll(!showAll);
   };
 
-  // Icon map for project types
-  const getIconClass = (icon: string): string => {
-    return `fas fa-${icon}`;
-  };
-
   // Background gradient map for project types
   const getGradient = (index: number): string => {
     const gradients = [
@@ -91,10 +93,12 @@ const ProjectsSection = () => {
         <div className="projects-grid grid gap-8">
           {visibleProjects.map((project, index) => (
             <div key={index} className="project-card rounded-xl overflow-hidden shadow-lg bg-white transform transition-all duration-300">
-              <div className={`h-48 bg-gradient-to-r ${getGradient(index)} flex items-center justify-center`}>
-                <div className="card-icon text-3xl bg-white p-4 rounded-full shadow-md">
-                  <i className={`${getIconClass(project.icon)} text-purple`}></i>
-                </div>
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-poppins font-semibold mb-3 gradient-text from-purple to-pink">{project.title}</h3>
