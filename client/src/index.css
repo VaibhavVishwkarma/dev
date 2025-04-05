@@ -101,19 +101,19 @@
   /* Responsive grid for projects */
   @media (min-width: 1024px) {
     .projects-grid {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
     .projects-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
   @media (max-width: 767px) {
     .projects-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
@@ -122,12 +122,23 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(138, 75, 175, 0.05);
   }
 
   .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px -5px rgba(138, 75, 175, 0.15);
+    border-color: rgba(138, 75, 175, 0.1);
+  }
+  
+  .project-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 8px 20px -3px rgba(138, 75, 175, 0.25);
+  }
+  
+  .card-icon {
+    transition: all 0.3s ease;
   }
 }
 
