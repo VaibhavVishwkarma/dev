@@ -19,26 +19,58 @@ const ContactSection = () => {
     }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulating form submission
-    setTimeout(() => {
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          access_key: "5fa75b1d-6680-45d0-962b-32e1f7714798", // Web3Forms access key
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          from_name: "Portfolio Contact Form"
+        })
       });
       
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: ""
+      const data = await response.json();
+      
+      if (data.success) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for reaching out. I'll get back to you soon.",
+        });
+        
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: ""
+        });
+      } else {
+        toast({
+          title: "Error",
+          description: "There was an error sending your message. Please try again.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive"
       });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
   
   return (
@@ -55,6 +87,12 @@ const ContactSection = () => {
             <h3 className="text-xl font-semibold mb-6 font-poppins text-center">Send a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Web3Forms access key (hidden) */}
+              <input type="hidden" name="access_key" value="5fa75b1d-6680-45d0-962b-32e1f7714798" />
+              
+              {/* Honeypot field to prevent spam (hidden) */}
+              <input type="checkbox" name="botcheck" id="botcheck" className="hidden" style={{ display: 'none' }} />
+              
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                   Your Name
@@ -118,6 +156,12 @@ const ContactSection = () => {
                   placeholder="Your message here..."
                 ></textarea>
               </div>
+              
+              {/* Custom redirect (optional) */}
+              <input type="hidden" name="redirect" value={window.location.href} />
+
+              {/* Thank you message (optional) */}
+              <input type="hidden" name="from_name" value="Portfolio Contact Form" />
               
               <div className="pt-4">
                 <button
