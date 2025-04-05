@@ -47,12 +47,12 @@ const ProjectsSection = () => {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      if (width >= 1024) {
+      if (width >= 1024) { // Desktop - 3 per row
         setVisibleCount(showAll ? projects.length : 3);
-      } else if (width >= 768) {
-        setVisibleCount(showAll ? projects.length : 2);
-      } else {
-        setVisibleCount(showAll ? projects.length : 1);
+      } else if (width >= 768) { // Tablet - 2 per row
+        setVisibleCount(showAll ? projects.length : 4); // Show 2 rows (4 projects) on tablet
+      } else { // Mobile - 1 per row
+        setVisibleCount(showAll ? projects.length : 2); // Show 2 rows (2 projects) on mobile
       }
     };
 
@@ -90,9 +90,12 @@ const ProjectsSection = () => {
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">Showcase of my latest work across various technologies and domains.</p>
         </div>
         
-        <div className="projects-grid grid gap-8">
+        <div className="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {visibleProjects.map((project, index) => (
-            <div key={index} className="project-card rounded-xl overflow-hidden shadow-lg bg-white transform transition-all duration-300">
+            <div 
+              key={index} 
+              className="project-card rounded-xl overflow-hidden shadow-lg bg-white transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+            >
               <div className="h-48 overflow-hidden">
                 <img 
                   src={project.image} 

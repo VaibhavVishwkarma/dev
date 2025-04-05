@@ -34,7 +34,14 @@ const NavBar = () => {
     >
       <div className="container mx-auto max-w-6xl px-4">
         <nav className="flex justify-between items-center">
-          <a href="#" className="text-2xl font-bold font-poppins text-transparent bg-clip-text bg-gradient-to-r from-purple to-blue">
+          <a 
+            href="/" 
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = window.location.pathname;
+            }}
+            className="text-2xl font-bold font-poppins text-transparent bg-clip-text bg-gradient-to-r from-purple to-blue"
+          >
             VV
           </a>
           

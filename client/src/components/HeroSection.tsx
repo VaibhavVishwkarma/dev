@@ -14,9 +14,9 @@ const HeroSection = () => {
               Computer Science Student & AI Enthusiast
             </h2>
             <p className="text-gray-600 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-              I specialize in building innovative web applications and exploring the 
-              endless possibilities of artificial intelligence. Constantly learning 
-              and pushing the boundaries of what's possible with code.
+              I'm a passionate student currently learning and exploring the world of software development, 
+              data science, artificial intelligence, and machine learning. I'm building projects as I learn 
+              and constantly working to improve my skills to become a better problem solver through code and technology.
             </p>
             
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -31,6 +31,14 @@ const HeroSection = () => {
                 className="px-6 py-3 rounded-full bg-white border border-purple/20 text-purple font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-purple/5"
               >
                 Contact Me
+              </a>
+              <a 
+                href="/CV.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-pink to-purple text-white font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 glow-btn"
+              >
+                <i className="fas fa-download mr-2"></i> Download Resume
               </a>
             </div>
             
