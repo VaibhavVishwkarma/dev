@@ -1,186 +1,107 @@
+import React from "react";
+
 const SkillsSection = () => {
+  // Technical Skills data
+  const technicalSkills = [
+    { name: "JavaScript", level: 85 },
+    { name: "React.js", level: 80 },
+    { name: "Python", level: 90 },
+    { name: "Machine Learning", level: 75 },
+    { name: "Node.js", level: 70 },
+    { name: "TypeScript", level: 65 },
+    { name: "Next.js", level: 60 },
+    { name: "TensorFlow", level: 70 }
+  ];
+
+  // Languages data (without proficiency level notations)
+  const languages = [
+    { name: "English", level: 95 },
+    { name: "Hindi", level: 100 },
+    { name: "French", level: 45 },
+    { name: "German", level: 30 }
+  ];
+
+  // Soft Skills data
+  const softSkills = [
+    "Problem-solving",
+    "Team Collaboration",
+    "Critical Thinking",
+    "Adaptability",
+    "Time Management",
+    "Communication",
+    "Leadership",
+    "Creativity"
+  ];
+
   return (
-    <section id="skills" className="py-20 px-4 bg-white">
+    <section id="skills" className="py-20 px-4 bg-gradient-to-br from-purple/5 via-blue/5 to-pink/5">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <h2 className="inline-block text-3xl md:text-4xl font-bold font-poppins gradient-text from-green to-blue pb-2">Skills & Abilities</h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-green to-blue rounded-full mx-auto mt-2"></div>
+          <h2 className="inline-block text-3xl md:text-4xl font-bold font-poppins gradient-text from-blue to-pink pb-2">Skills</h2>
+          <div className="h-1 w-24 bg-gradient-to-r from-blue to-pink rounded-full mx-auto mt-2"></div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           {/* Technical Skills */}
-          <div className="glass-card rounded-xl overflow-hidden shadow-lg p-8 bg-gradient-to-br from-white to-blue-50">
-            <h3 className="text-2xl font-poppins font-semibold mb-6 text-gray-800">Technical Skills</h3>
-            
-            <div className="space-y-6">
-              <div>
-                <div className="flex justify-between mb-2">
-                  <span className="text-gray-700 font-medium">Programming Languages</span>
-                  <span className="text-blue font-medium">85%</span>
+          <div className="glass-card p-8 rounded-xl shadow-lg">
+            <h3 className="font-poppins text-xl font-semibold mb-6 text-center">
+              <i className="fas fa-laptop-code mr-2 text-purple"></i> Technical Skills
+            </h3>
+            <div className="space-y-5">
+              {technicalSkills.map((skill, index) => (
+                <div key={index}>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-gray-700">{skill.name}</span>
+                    <span className="text-gray-500 text-sm">{skill.level}%</span>
+                  </div>
+                  <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div 
+                      className="progress-bar h-full rounded-full" 
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
                 </div>
-                <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
-                  <div className="progress-bar h-full rounded-full" style={{ width: '85%' }}></div>
-                </div>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  <span className="px-3 py-1 rounded-full text-xs bg-blue-100 text-blue">C</span>
-                  <span className="px-3 py-1 rounded-full text-xs bg-blue-100 text-blue">Python</span>
-                  <span className="px-3 py-1 rounded-full text-xs bg-blue-100 text-blue">Pandas</span>
-                  <span className="px-3 py-1 rounded-full text-xs bg-blue-100 text-blue">NumPy</span>
-                </div>
-              </div>
-              
-              <div>
-                <div className="flex justify-between mb-2">
-                  <span className="text-gray-700 font-medium">Web Development</span>
-                  <span className="text-purple font-medium">90%</span>
-                </div>
-                <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
-                  <div className="progress-bar h-full rounded-full" style={{ width: '90%' }}></div>
-                </div>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  <span className="px-3 py-1 rounded-full text-xs bg-purple-100 text-purple">HTML</span>
-                  <span className="px-3 py-1 rounded-full text-xs bg-purple-100 text-purple">CSS</span>
-                  <span className="px-3 py-1 rounded-full text-xs bg-purple-100 text-purple">JavaScript</span>
-                  <span className="px-3 py-1 rounded-full text-xs bg-purple-100 text-purple">Tailwind CSS</span>
-                  <span className="px-3 py-1 rounded-full text-xs bg-purple-100 text-purple">React.js</span>
-                </div>
-              </div>
-              
-              <div>
-                <div className="flex justify-between mb-2">
-                  <span className="text-gray-700 font-medium">Design Tools</span>
-                  <span className="text-pink font-medium">75%</span>
-                </div>
-                <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
-                  <div className="progress-bar h-full rounded-full" style={{ width: '75%' }}></div>
-                </div>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  <span className="px-3 py-1 rounded-full text-xs bg-pink-100 text-pink">Figma</span>
-                  <span className="px-3 py-1 rounded-full text-xs bg-pink-100 text-pink">Adobe XD</span>
-                </div>
-              </div>
-              
-              <div>
-                <div className="flex justify-between mb-2">
-                  <span className="text-gray-700 font-medium">Data Analysis</span>
-                  <span className="text-green font-medium">80%</span>
-                </div>
-                <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
-                  <div className="progress-bar h-full rounded-full" style={{ width: '80%' }}></div>
-                </div>
-                <div className="flex flex-wrap gap-2 mt-2">
-                  <span className="px-3 py-1 rounded-full text-xs bg-green-100 text-green">Tableau</span>
-                  <span className="px-3 py-1 rounded-full text-xs bg-green-100 text-green">MS Excel</span>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
           
-          {/* Language Skills */}
-          <div className="glass-card rounded-xl overflow-hidden shadow-lg p-8 bg-gradient-to-br from-white to-purple-50">
-            <h3 className="text-2xl font-poppins font-semibold mb-6 text-gray-800">Language Skills</h3>
-            
-            <div className="mb-8">
-              <p className="text-gray-700 mb-4">
-                <span className="font-medium">Mother Tongue:</span> Hindi
-              </p>
-              <p className="text-gray-500 text-sm italic">
-                Levels: A1/A2: Basic user; B1/B2: Independent user; C1/C2: Proficient user
-              </p>
+          {/* Languages */}
+          <div className="glass-card p-8 rounded-xl shadow-lg">
+            <h3 className="font-poppins text-xl font-semibold mb-6 text-center">
+              <i className="fas fa-language mr-2 text-blue"></i> Languages
+            </h3>
+            <div className="space-y-5">
+              {languages.map((language, index) => (
+                <div key={index}>
+                  <div className="flex justify-between mb-2">
+                    <span className="text-gray-700">{language.name}</span>
+                    <span className="text-gray-500 text-sm">{language.level}%</span>
+                  </div>
+                  <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div 
+                      className="progress-bar h-full rounded-full" 
+                      style={{ width: `${language.level}%`, backgroundImage: "linear-gradient(to right, #3b82f6, #8b5cf6)" }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
             </div>
-            
-            <div className="space-y-8">
-              {/* English */}
-              <div>
-                <div className="flex justify-between mb-3">
-                  <span className="text-gray-700 font-medium">English</span>
-                  <span className="px-3 py-1 rounded-full text-xs bg-blue-100 text-blue">B2 Level</span>
+          </div>
+          
+          {/* Soft Skills */}
+          <div className="glass-card p-8 rounded-xl shadow-lg">
+            <h3 className="font-poppins text-xl font-semibold mb-6 text-center">
+              <i className="fas fa-users mr-2 text-pink"></i> Soft Skills
+            </h3>
+            <div className="grid grid-cols-2 gap-4">
+              {softSkills.map((skill, index) => (
+                <div 
+                  key={index} 
+                  className="bg-white px-4 py-3 rounded-lg shadow text-center hover:shadow-md transition-all hover:-translate-y-1 duration-300"
+                >
+                  <span className="text-gray-700 text-sm">{skill}</span>
                 </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <p className="text-sm text-gray-600 mb-1">Understanding</p>
-                    <div className="flex space-x-1">
-                      <div className="w-6 h-2 rounded-full bg-blue"></div>
-                      <div className="w-6 h-2 rounded-full bg-blue"></div>
-                      <div className="w-6 h-2 rounded-full bg-blue"></div>
-                      <div className="w-6 h-2 rounded-full bg-blue opacity-40"></div>
-                      <div className="w-6 h-2 rounded-full bg-blue opacity-20"></div>
-                    </div>
-                    <p className="text-xs text-gray-500 mt-1">Listening: B2, Reading: B1</p>
-                  </div>
-                  
-                  <div>
-                    <p className="text-sm text-gray-600 mb-1">Speaking</p>
-                    <div className="flex space-x-1">
-                      <div className="w-6 h-2 rounded-full bg-blue"></div>
-                      <div className="w-6 h-2 rounded-full bg-blue"></div>
-                      <div className="w-6 h-2 rounded-full bg-blue"></div>
-                      <div className="w-6 h-2 rounded-full bg-blue opacity-40"></div>
-                      <div className="w-6 h-2 rounded-full bg-blue opacity-20"></div>
-                    </div>
-                    <p className="text-xs text-gray-500 mt-1">Production: B2, Interaction: B2</p>
-                  </div>
-                </div>
-                
-                <div className="mt-3">
-                  <p className="text-sm text-gray-600 mb-1">Writing</p>
-                  <div className="flex space-x-1">
-                    <div className="w-6 h-2 rounded-full bg-blue"></div>
-                    <div className="w-6 h-2 rounded-full bg-blue"></div>
-                    <div className="w-6 h-2 rounded-full bg-blue"></div>
-                    <div className="w-6 h-2 rounded-full bg-blue opacity-40"></div>
-                    <div className="w-6 h-2 rounded-full bg-blue opacity-20"></div>
-                  </div>
-                  <p className="text-xs text-gray-500 mt-1">Level: B2</p>
-                </div>
-              </div>
-              
-              {/* German */}
-              <div>
-                <div className="flex justify-between mb-3">
-                  <span className="text-gray-700 font-medium">German</span>
-                  <span className="px-3 py-1 rounded-full text-xs bg-purple-100 text-purple">A2 Level</span>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <p className="text-sm text-gray-600 mb-1">Understanding</p>
-                    <div className="flex space-x-1">
-                      <div className="w-6 h-2 rounded-full bg-purple"></div>
-                      <div className="w-6 h-2 rounded-full bg-purple"></div>
-                      <div className="w-6 h-2 rounded-full bg-purple opacity-20"></div>
-                      <div className="w-6 h-2 rounded-full bg-purple opacity-20"></div>
-                      <div className="w-6 h-2 rounded-full bg-purple opacity-20"></div>
-                    </div>
-                    <p className="text-xs text-gray-500 mt-1">Listening: A2, Reading: A2</p>
-                  </div>
-                  
-                  <div>
-                    <p className="text-sm text-gray-600 mb-1">Speaking</p>
-                    <div className="flex space-x-1">
-                      <div className="w-6 h-2 rounded-full bg-purple"></div>
-                      <div className="w-6 h-2 rounded-full bg-purple"></div>
-                      <div className="w-6 h-2 rounded-full bg-purple opacity-20"></div>
-                      <div className="w-6 h-2 rounded-full bg-purple opacity-20"></div>
-                      <div className="w-6 h-2 rounded-full bg-purple opacity-20"></div>
-                    </div>
-                    <p className="text-xs text-gray-500 mt-1">Production: A2, Interaction: A2</p>
-                  </div>
-                </div>
-                
-                <div className="mt-3">
-                  <p className="text-sm text-gray-600 mb-1">Writing</p>
-                  <div className="flex space-x-1">
-                    <div className="w-6 h-2 rounded-full bg-purple"></div>
-                    <div className="w-6 h-2 rounded-full bg-purple"></div>
-                    <div className="w-6 h-2 rounded-full bg-purple opacity-20"></div>
-                    <div className="w-6 h-2 rounded-full bg-purple opacity-20"></div>
-                    <div className="w-6 h-2 rounded-full bg-purple opacity-20"></div>
-                  </div>
-                  <p className="text-xs text-gray-500 mt-1">Level: A2</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

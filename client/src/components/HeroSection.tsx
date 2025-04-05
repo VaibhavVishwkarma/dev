@@ -1,59 +1,84 @@
+import React from "react";
+
 const HeroSection = () => {
   return (
-    <section className="pt-32 pb-20 px-4 bg-gradient-to-br from-purple/10 via-pink/5 to-blue/10">
-      <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between">
-        <div className="md:w-1/2 mb-10 md:mb-0">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-poppins leading-tight mb-4">
-            Hi, I'm <span className="gradient-text from-purple via-pink to-blue">Vaibhav</span>
-          </h1>
-          <h2 className="text-xl md:text-2xl font-poppins text-gray-600 mb-6">Computer Science Student & Developer</h2>
-          <p className="text-gray-700 mb-8 max-w-lg">
-            Passionate about programming, artificial intelligence, and IoT-driven technologies. 
-            Strong foundation in problem-solving and logical thinking.
-          </p>
-          <div className="flex space-x-4 mb-6">
-            <a 
-              href="https://www.linkedin.com/in/vaibhav-vishwkarma-b561a12a5/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-blue to-purple text-white shadow-lg transition-transform hover:scale-110"
-              aria-label="LinkedIn Profile"
-            >
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-            <a 
-              href="https://github.com/vaibhavVishwkarma" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-purple to-pink text-white shadow-lg transition-transform hover:scale-110"
-              aria-label="GitHub Profile"
-            >
-              <i className="fab fa-github"></i>
-            </a>
-            <a 
-              href="https://vaibhavvishwkarma.github.io/Vaibhav-Web/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-pink to-orange text-white shadow-lg transition-transform hover:scale-110"
-              aria-label="Portfolio Website"
-            >
-              <i className="fas fa-globe"></i>
-            </a>
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-20 pb-32 bg-gradient-to-br from-purple/5 via-blue/5 to-pink/5">
+      <div className="container mx-auto max-w-6xl">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
+          <div className="w-full lg:w-1/2 text-center lg:text-left order-2 lg:order-1">
+            <p className="text-purple font-medium mb-3">Hello, I'm</p>
+            <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold font-poppins mb-4">
+              <span className="gradient-text from-purple to-blue">Vaibhav</span> <span className="gradient-text from-blue to-pink">Vishwkarma</span>
+            </h1>
+            <h2 className="text-lg md:text-xl font-medium text-gray-700 mb-6">
+              Computer Science Student & AI Enthusiast
+            </h2>
+            <p className="text-gray-600 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+              I specialize in building innovative web applications and exploring the 
+              endless possibilities of artificial intelligence. Constantly learning 
+              and pushing the boundaries of what's possible with code.
+            </p>
+            
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+              <a 
+                href="#projects" 
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-purple to-blue text-white font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 glow-btn"
+              >
+                View My Work
+              </a>
+              <a 
+                href="#contact" 
+                className="px-6 py-3 rounded-full bg-white border border-purple/20 text-purple font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-purple/5"
+              >
+                Contact Me
+              </a>
+            </div>
+            
+            <div className="flex gap-5 mt-10 justify-center lg:justify-start">
+              <a 
+                href="https://github.com/vaibhav-vishwkarma" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-gradient-to-r from-purple to-blue flex items-center justify-center text-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
+                <i className="fab fa-github"></i>
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/vaibhav-vishwkarma" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-gradient-to-r from-blue to-purple flex items-center justify-center text-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+              <a 
+                href="https://twitter.com/vaibhav_vishw" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-gradient-to-r from-purple to-pink flex items-center justify-center text-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
+                <i className="fab fa-twitter"></i>
+              </a>
+            </div>
           </div>
-          <a href="#contact" className="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-purple to-pink text-white font-medium text-lg shadow-lg glow-btn">
-            Get In Touch
-          </a>
-        </div>
-        
-        <div className="md:w-1/2 flex justify-center">
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple via-pink to-blue rounded-full blur-3xl opacity-20"></div>
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white p-3 shadow-xl relative z-10">
-              <div className="w-full h-full rounded-full bg-gradient-to-br from-purple via-pink to-blue p-1">
-                <div className="w-full h-full rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
-                  <span className="text-6xl text-gray-400 font-poppins">VV</span>
+          
+          <div className="w-full lg:w-1/2 order-1 lg:order-2 mb-10 lg:mb-0">
+            <div className="relative">
+              <div className="absolute -inset-2 bg-gradient-to-r from-purple via-blue to-pink rounded-full blur-xl opacity-20 animate-pulse"></div>
+              <div className="relative bg-white rounded-full p-4 shadow-xl max-w-md mx-auto">
+                <div className="aspect-w-1 aspect-h-1 rounded-full overflow-hidden bg-gradient-to-r from-purple to-blue">
+                  <div className="flex items-center justify-center h-full text-white text-9xl">
+                    <span className="font-bold font-poppins">V</span>
+                  </div>
                 </div>
               </div>
+            </div>
+            
+            <div className="absolute hidden lg:block">
+              {/* Floating Elements */}
+              <div className="absolute -top-10 right-10 w-16 h-16 bg-gradient-to-r from-purple to-blue rounded-xl rotate-12 opacity-10 animate-float"></div>
+              <div className="absolute top-40 -right-10 w-20 h-20 bg-gradient-to-r from-blue to-pink rounded-full opacity-10 animate-float animation-delay-1000"></div>
+              <div className="absolute top-20 -left-10 w-14 h-14 bg-gradient-to-r from-pink to-purple rounded-lg rotate-45 opacity-10 animate-float animation-delay-2000"></div>
             </div>
           </div>
         </div>

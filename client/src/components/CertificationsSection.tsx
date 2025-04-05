@@ -1,4 +1,9 @@
+import { useState, useEffect } from "react";
+
 const CertificationsSection = () => {
+  const [showAll, setShowAll] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(3);
+  
   const certifications = [
     {
       title: "Front-End Developer Professional Certificate",
@@ -44,6 +49,34 @@ const CertificationsSection = () => {
     }
   ];
 
+  // Update visible count based on screen size
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width >= 1024) {
+        setVisibleCount(showAll ? certifications.length : 3);
+      } else if (width >= 768) {
+        setVisibleCount(showAll ? certifications.length : 2);
+      } else {
+        setVisibleCount(showAll ? certifications.length : 1);
+      }
+    };
+
+    handleResize(); // Initial setup
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [showAll, certifications.length]);
+
+  const visibleCertifications = certifications.slice(0, visibleCount);
+  const hasMoreCertifications = certifications.length > visibleCount;
+
+  const toggleShowAll = () => {
+    setShowAll(!showAll);
+  };
+
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-blue/5 via-purple/5 to-pink/5">
       <div className="container mx-auto max-w-6xl">
@@ -53,7 +86,7 @@ const CertificationsSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {certifications.map((cert, index) => (
+          {visibleCertifications.map((cert, index) => (
             <div key={index} className="card rounded-xl overflow-hidden shadow-lg bg-white hover:shadow-xl transition-all transform hover:-translate-y-1 duration-300">
               <div className={`h-24 bg-gradient-to-r ${cert.gradient} flex items-center justify-center`}>
                 <i className={`${cert.icon} text-white text-4xl`}></i>
@@ -69,6 +102,27 @@ const CertificationsSection = () => {
             </div>
           ))}
         </div>
+        
+        {(hasMoreCertifications || showAll) && (
+          <div className="text-center mt-12">
+            <button
+              onClick={toggleShowAll}
+              className="px-6 py-3 rounded-full bg-gradient-to-r from-blue to-purple text-white font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            >
+              {showAll ? (
+                <>
+                  <i className="fas fa-chevron-up mr-2"></i>
+                  Show Less
+                </>
+              ) : (
+                <>
+                  <i className="fas fa-chevron-down mr-2"></i>
+                  Show More
+                </>
+              )}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
