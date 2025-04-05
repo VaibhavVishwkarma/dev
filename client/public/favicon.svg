@@ -3,9 +3,9 @@
   <!-- Background Circle -->
   <circle cx="128" cy="128" r="128" fill="url(#paint0_linear)"/>
   
-  <!-- VV Text -->
-  <path d="M84.3867 173L105.387 83H124.387L145.387 173H130.387L114.387 98H115.387L99.3867 173H84.3867Z" fill="white"/>
-  <path d="M151.387 173L172.387 83H191.387L212.387 173H197.387L181.387 98H182.387L166.387 173H151.387Z" fill="white"/>
+  <!-- VV Text - Corrected orientation -->
+  <path d="M92 83L72 173H88L104 98H103L119 173H134L114 83H92Z" fill="white"/>
+  <path d="M159 83L139 173H155L171 98H170L186 173H201L181 83H159Z" fill="white"/>
   
   <!-- Gradient Definition -->
   <defs>

@@ -32,11 +32,14 @@ const HeroSection = () => {
               >
                 Contact Me
               </a>
+            </div>
+            
+            <div className="mt-4 flex justify-center lg:justify-start">
               <a 
                 href="/CV.pdf" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="px-6 py-3 rounded-full bg-gradient-to-r from-pink to-purple text-white font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 glow-btn"
+                className="w-auto px-6 py-3 rounded-full bg-gradient-to-r from-pink to-purple text-white font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 glow-btn flex items-center"
               >
                 <i className="fas fa-download mr-2"></i> Download Resume
               </a>

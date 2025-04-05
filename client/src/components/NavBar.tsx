@@ -56,15 +56,7 @@ const NavBar = () => {
             <a href="#contact" className="text-gray-700 hover:text-purple transition-colors">Contact</a>
           </div>
           
-          {/* Resume Button */}
-          <a 
-            href="/resume.pdf" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="hidden md:block px-5 py-2 rounded-full bg-gradient-to-r from-purple to-blue text-white font-medium text-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-          >
-            Resume
-          </a>
+          {/* Resume Button removed as requested */}
           
           {/* Mobile Menu Button */}
           <button 
@@ -95,15 +87,7 @@ const NavBar = () => {
           <a href="#projects" className="text-gray-700 hover:text-purple transition-colors py-2" onClick={handleLinkClick}>Projects</a>
           <a href="#contact" className="text-gray-700 hover:text-purple transition-colors py-2" onClick={handleLinkClick}>Contact</a>
           
-          <a 
-            href="/resume.pdf" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="px-5 py-2 rounded-full bg-gradient-to-r from-purple to-blue text-white font-medium text-center transition-all duration-300 hover:shadow-lg"
-            onClick={handleLinkClick}
-          >
-            Resume
-          </a>
+          {/* Mobile Resume Button removed as requested */}
         </div>
       </div>
     </header>
