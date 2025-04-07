@@ -78,7 +78,7 @@ const CertificationsSection = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-blue/5 via-purple/5 to-pink/5">
+    <section id="certifications" className="py-20 px-4 bg-gradient-to-br from-blue/5 via-purple/5 to-pink/5">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="inline-block text-3xl md:text-4xl font-bold font-poppins gradient-text from-blue to-purple pb-2">Certifications</h2>
