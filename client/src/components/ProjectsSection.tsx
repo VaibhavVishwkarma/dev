@@ -24,22 +24,22 @@ const ProjectsSection = () => {
       title: "Nike Store E-Commerce Website",
       description: "Built an immersive sneaker storefront with manual slider, product customization, and responsive payment form. Features adaptive design and brand-specific aesthetics.",
       image: `${import.meta.env.BASE_URL || "/"}images/project2.jpg`,
-      tags: ["React", "CSS", "E-Commerce", "UI/UX"],
-      github: "https://github.com/vaibhavVishwkarma/Shoes-Store-"
+      tags: ["HTML", "CSS", "JavaScript", "UI/UX"],
+      github: "https://github.com/VaibhavVishwkarma/shoesHub"
     },
     {
       title: "Real-Time Weather Application",
       description: "Live weather monitoring system using OpenWeatherMap API, displaying temperature, humidity, wind patterns, and dynamic background adjustments based on weather conditions.",
       image: `${import.meta.env.BASE_URL || "/"}images/project3.jpg`,
-      tags: ["JavaScript", "API Integration", "Weather Data", "React"],
-      github: "https://github.com/vaibhavVishwkarma/Real-Time-Weather-App"
+      tags: ["JavaScript", "API Integration", "Weather Data"],
+      github: "https://github.com/VaibhavVishwkarma/Weather-App"
     },
     {
       title: "Portfolio Website",
       description: "A modern, responsive portfolio website with sections for skills, projects, education, and more. Features a rainbow theme with gradient animations and responsive design for all devices.",
       image: `${import.meta.env.BASE_URL || "/"}images/project4.jpg`,
-      tags: ["HTML", "CSS", "JavaScript", "React"],
-      github: "https://github.com/vaibhavVishwkarma/portfolio"
+      tags: ["Tailqind CSS", "TypeScript", "React"],
+      github: "https://github.com/VaibhavVishwkarma/dev"
     }
   ];
 

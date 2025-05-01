@@ -22,7 +22,7 @@ const Footer = () => {
           
           <div className="flex gap-4">
             <a 
-              href="https://github.com/vaibhav-vishwkarma" 
+              href="https://github.com/VaibhavVishwkarma" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-700 hover:text-purple hover:border-purple/50 transition-all duration-300"
@@ -30,7 +30,7 @@ const Footer = () => {
               <i className="fab fa-github"></i>
             </a>
             <a 
-              href="https://www.linkedin.com/in/vaibhav-vishwkarma" 
+              href="https://www.linkedin.com/in/vaibhav-vishwkarma-b561a12a5/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-700 hover:text-blue hover:border-blue/50 transition-all duration-300"
@@ -38,7 +38,7 @@ const Footer = () => {
               <i className="fab fa-linkedin-in"></i>
             </a>
             <a 
-              href="https://twitter.com/vaibhav_vishw" 
+              href="https://x.com/Vaibhav21077629" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-700 hover:text-[#1DA1F2] hover:border-[#1DA1F2]/50 transition-all duration-300"
