@@ -25,7 +25,7 @@ For local development, install dependencies and start the development server.
 ## GitHub Pages Deployment
 
 The site is configured for deployment at:
-https://vaibhavvishwkarma.github.io/code-with-vaibhav/
+https://vaibhavvishwkarma.github.io/dev/
 
 ### Deployment Configuration
 
