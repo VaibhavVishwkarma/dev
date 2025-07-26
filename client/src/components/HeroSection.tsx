@@ -36,7 +36,7 @@ const HeroSection = () => {
             
             <div className="mt-4 flex justify-center lg:justify-start">
               <a 
-                href={`${import.meta.env.BASE_URL || "/"}CV.pdf`}
+                href={}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-auto px-6 py-3 rounded-full bg-gradient-to-r from-pink to-purple text-white font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 glow-btn flex items-center"
